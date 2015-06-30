@@ -15,13 +15,15 @@ n = length(theta);
 
 %J=(1/(2*m))*(X*theta-y)'*(X*theta-y);
 
-for iter = 1:m
-    tmp=0;
-for i=1:n
-    tmp=tmp+theta(i,1)*X(iter,i);
-end
-J=J+(tmp-  y(iter))^2;
-end
+prediction= X*theta;
+J=sum((prediction-y).^2);
+%for iter = 1:m
+%    tmp=0;
+%for i=1:n
+%    tmp=tmp+theta(i,1)*X(iter,i);
+%end
+%J=J+(tmp-  y(iter))^2;
+%end
 
 % =========================================================================
 J=J/(2*m);

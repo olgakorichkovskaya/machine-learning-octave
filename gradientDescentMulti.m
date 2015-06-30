@@ -38,14 +38,17 @@ fprintf(tml,tt);
 end
 %==========================================
 function J = sum1(X, y, theta, m, j, n)
-J = 0;
-for iter = 1:m
-tmp=0;
-for i=1:n
-    tmp=tmp+theta(i,1)*X(iter,i);
-end
-tmp=tmp- y(iter);
-J=J+tmp*X(iter,j);
-end
-J=J/m;
+
+div=X*theta-y;
+J=sum( div'*X(:,j))/m;
+
+%for iter = 1:m
+%tmp=0;
+%for i=1:n
+%    tmp=tmp+theta(i,1)*X(iter,i);
+%end
+%tmp=tmp- y(iter);
+%J=J+tmp*X(iter,j);
+%end
+%J=J/m;
 end
