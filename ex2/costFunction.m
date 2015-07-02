@@ -10,11 +10,11 @@ m = length(y); % number of training examples
 grad = zeros(size(theta));
 h=sigmoid(X*theta);
 tmp=-1.*y.*log(h) - (1-y).*log(1-h);
-J=(1/m)*sum(tmp);
+J=sum(tmp)/m;
 
 for i=1:size(theta)
 grad(i)=X(:,i)'*(h-y);
 end
-grad=(1/m)*grad;
+grad=grad/m;
 
 end
