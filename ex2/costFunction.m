@@ -12,9 +12,11 @@ h=sigmoid(X*theta);
 tmp=-1.*y.*log(h) - (1-y).*log(1-h);
 J=sum(tmp)/m;
 
-for i=1:size(theta)
-grad(i)=X(:,i)'*(h-y);
-end
+%for i=1:size(theta)
+%grad(i)=X(:,i)'*(h-y);
+%end
+
+grad = X'*(h-y);
 grad=grad/m;
 
 end

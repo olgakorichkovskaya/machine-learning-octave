@@ -50,7 +50,7 @@ X = [ones(m, 1) X];
 %
 
 
-options = optimset('GradObj', 'on', 'MaxIter', 50);
+options = optimset('GradObj', 'off', 'MaxIter', 50);
 
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 

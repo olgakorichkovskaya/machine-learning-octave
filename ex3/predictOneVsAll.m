@@ -5,7 +5,7 @@ function p = predictOneVsAll(all_theta, X)
 %  for each example in the matrix X. Note that X contains the examples in
 %  rows. all_theta is a matrix where the i-th row is a trained logistic
 %  regression theta vector for the i-th class. You should set p to a vector
--+%  of values from 1..K (e.g., p = [1; 3; 1; 2] predicts classes 1, 3, 1, 2
+%  of values from 1..K (e.g., p = [1; 3; 1; 2] predicts classes 1, 3, 1, 2
 %  for 4 examples) 
 
 m = size(X, 1);
@@ -17,7 +17,26 @@ p = zeros(size(X, 1), 1);
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
 
-% ====================== YOUR CODE HERE ======================
+%for i=1:m
+%x= X(i,:);
+%r=zeros(num_labels,1);
+%    for k=1:num_labels
+%        theta= all_theta(k,:);
+%        r(k)=double(sigmoid(x*theta')>=0.5);
+%    end
+%    [M,I]=max(r);
+%    p(i,1)=I;
+%end
+%tmp = double(sigmoid(all_theta*X)>=0.5);
+%p=max(tmp);
+
+%m x num_labels
+sig=sigmoid(X*all_theta');
+[m, p]=max(sig,[],2);
+
+
+
+ % ====================== YOUR CODE HERE ======================
 % Instructions: Complete the following code to make predictions using
 %               your learned logistic regression parameters (one-vs-all).
 %               You should set p to a vector of predictions (from 1 to
