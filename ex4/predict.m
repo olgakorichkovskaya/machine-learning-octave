@@ -7,14 +7,10 @@ function [p,sig] = predict(Theta1, Theta2, X)
 m = size(X, 1);
 num_labels = size(Theta2, 1);
 
-% You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
 
 h1 = sigmoid([ones(m, 1) X] * Theta1');
 sig = sigmoid([ones(m, 1) h1] * Theta2');
 [t, p] = max(sig, [], 2);
-
-% =========================================================================
-
 
 end
