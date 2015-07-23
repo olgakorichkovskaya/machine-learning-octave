@@ -6,7 +6,13 @@
    3. Linear regression with multiple variables
    4. Selecting learning rates
    5. Normal Equations
+
 ###### Ex2:    
+
+###### Ex3:
+
+###### Ex4:
+
 ###### Ex5: Regularized Linear Regression and Bias vs. Variance
    1. Regularized Linear Regression (cost function, gradient): y=theta0+ theta1*x1 (dimention=1)
    2. Bias-variance tradeoff: plot training and test errors on a learning curve to diagnose bias-variance problems (use different amount of testing data m:=1:m)
