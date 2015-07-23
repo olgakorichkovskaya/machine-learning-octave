@@ -7,9 +7,6 @@
 clear ; close all; clc
 
 %% =========== Part 1: Loading and Visualizing Data =============
-%  We start the exercise by first loading and visualizing the dataset. 
-%  The following code will load the dataset into your environment and plot
-%  the data.
 fprintf('Loading and Visualizing Data ...\n')
 load ('ex5data1.mat');
 m = size(X, 1);
@@ -23,8 +20,7 @@ ylabel('Water flowing out of the dam (y)');
 %pause;
 
 %% =========== Part 2: Regularized Linear Regression Cost =============
-%  You should now implement the cost function for regularized linear 
-%  regression. 
+%  The cost function for regularized linear regression. 
 %
 theta = [1 ; 1];
 J = linearRegCostFunction([ones(m, 1) X], y, theta, 1);
@@ -48,9 +44,7 @@ fprintf(['Gradient at theta = [1 ; 1]:  [%f; %f] '...
 
 
 %% =========== Part 4: Train Linear Regression =============
-%  Write Up Note: The data is non-linear, so this will not give a great 
-%                 fit.
-%
+%  The data is non-linear, so this will not give a great fit.
 
 %  Train linear regression with lambda = 0
 lambda = 0;
@@ -67,14 +61,8 @@ hold off;
 %fprintf('Program paused. Press enter to continue.\n');
 %pause;
 
-
 %% =========== Part 5: Learning Curve for Linear Regression =============
-%  Next, you should implement the learningCurve function. 
-%
-%  Write Up Note: Since the model is underfitting the data, we expect to
-%                 see a graph with "high bias" -- slide 8 in ML-advice.pdf 
-%
-
+% the learningCurve function. 
 lambda = 0;
 [error_train, error_val] = ...
     learningCurve([ones(m, 1) X], y, ...
@@ -93,14 +81,11 @@ for i = 1:m
     fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_val(i));
 end
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 %% =========== Part 6: Feature Mapping for Polynomial Regression =============
-%  One solution to this is to use polynomial regression. You should now
-%  complete polyFeatures to map each example into its powers
-%
-
+%  One solution to this is to use polynomial regression. 
 p = 8;
 
 % Map X onto Polynomial Features and Normalize
@@ -123,19 +108,13 @@ X_poly_val = [ones(size(X_poly_val, 1), 1), X_poly_val];           % Add Ones
 fprintf('Normalized Training Example 1:\n');
 fprintf('  %f  \n', X_poly(1, :));
 
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
-
-
-
+%fprintf('\nProgram paused. Press enter to continue.\n');
+%pause;
 %% =========== Part 7: Learning Curve for Polynomial Regression =============
-%  Now, you will get to experiment with polynomial regression with multiple
-%  values of lambda. The code below runs polynomial regression with 
-%  lambda = 0. You should try running the code with different values of
-%  lambda to see how the fit and learning curve change.
-%
+% try running the code with different values of lambda to see 
+% how the fit and learning curve change.
 
-lambda = 0;
+lambda = 2.35;
 [theta] = trainLinearReg(X_poly, y, lambda);
 
 % Plot training data and fit
@@ -158,20 +137,16 @@ axis([0 13 0 100])
 legend('Train', 'Cross Validation')
 
 fprintf('Polynomial Regression (lambda = %f)\n\n', lambda);
-fprintf('# Training Examples\tTrain Error\tCross Validation Error\n');
-for i = 1:m
-    fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_val(i));
-end
+%fprintf('# Training Examples\tTrain Error\tCross Validation Error\n');
+%for i = 1:m
+%    fprintf('  \t%d\t\t%f\t%f\n', i, error_train(i), error_val(i));
+%end
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% =========== Part 8: Validation for Selecting Lambda =============
-%  You will now implement validationCurve to test various values of 
-%  lambda on a validation set. You will then use this to select the
-%  "best" lambda value.
-%
-
+%  Select the "best" lambda value.
 [lambda_vec, error_train, error_val] = ...
     validationCurve(X_poly, y, X_poly_val, yval);
 

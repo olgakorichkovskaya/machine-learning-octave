@@ -24,30 +24,30 @@ error_val = zeros(length(lambda_vec), 1);
 %               error_train(i), and error_val(i) should give 
 %               you the errors obtained after training with 
 %               lambda = lambda_vec(i)
-%
-% Note: You can loop over lambda_vec with the following:
-%
-%       for i = 1:length(lambda_vec)
-%           lambda = lambda_vec(i);
-%           % Compute train / val errors when training linear 
-%           % regression with regularization parameter lambda
-%           % You should store the result in error_train(i)
-%           % and error_val(i)
-%           ....
-%           
-%       end
-%
-%
+   for i = 1:length(lambda_vec)
+           lambda = lambda_vec(i);
+           [theta1] = trainLinearReg(X, y, lambda);
 
+     ht=  X*theta1;
+     error_train(i)=getErr(ht,y);
+  
+   ht=  Xval*theta1;
+   error_val(i)=getErr(ht,yval);
+     
+   
+           % Compute train / val errors when training linear %
+           % regression with regularization parameter lambda
+           % You should store the result in error_train(i)
+           % and error_val(i)
+           %           ....
+           
+  end
 
-
-
-
-
-
-
-
-
-% =========================================================================
 
 end
+function [err] = getErr(xx,yy)
+m = size(xx, 1);
+    err=sum( (xx-yy).^2 );
+    err=err/(2*m);
+end
+
