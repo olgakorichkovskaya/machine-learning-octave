@@ -19,5 +19,11 @@
    Indicator of variance is gab between training and test errors cureve.
    3. Move to Polynomial regression: use biger, dimention=8: y=theta0+ theta1*x1 +...+theta8*x1^8 (+ Feature Normalization)
    4. Adjusting the regularization parameter lambda (0..100)
-   5. Find best lambda automatically
+   5. Find best lambda automatically.
+
+###### Ex5: SVM
+   1. Training Linear SVM with different C
+   2. Implementing Gaussian Kernel
+   3. Find best C and sigma automatically
+   
   
