@@ -25,5 +25,5 @@
    1. Training Linear SVM with different C
    2. Implementing Gaussian Kernel
    3. Find best C and sigma automatically
-   
+   4. Spam filter
   
