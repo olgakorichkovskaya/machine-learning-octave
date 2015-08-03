@@ -30,4 +30,5 @@
 
 ###### Ex6:  Principle Component Analysis and K-Means Clustering
    1. K-Means
+   2. K-Means Clustering on Pixels
   
