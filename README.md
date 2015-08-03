@@ -24,6 +24,7 @@
 ###### Ex6: SVM
    1. Training Linear SVM with different C
    2. Implementing Gaussian Kernel
+   3. K-Means Clustering on Pixels
    3. Find best C and sigma automatically
    4. Spam filter
 
