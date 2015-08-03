@@ -21,9 +21,12 @@
    4. Adjusting the regularization parameter lambda (0..100)
    5. Find best lambda automatically.
 
-###### Ex5: SVM
+###### Ex6: SVM
    1. Training Linear SVM with different C
    2. Implementing Gaussian Kernel
    3. Find best C and sigma automatically
    4. Spam filter
+
+###### Ex6:  Principle Component Analysis and K-Means Clustering
+   1. K-Means
   
