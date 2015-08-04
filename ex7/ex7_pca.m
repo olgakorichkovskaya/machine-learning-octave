@@ -1,37 +1,13 @@
-%% Machine Learning Online Class
-%  Exercise 7 | Principle Component Analysis and K-Means Clustering
-%
-%  Instructions
-%  ------------
-%
-%  This file contains code that helps you get started on the
-%  exercise. You will need to complete the following functions:
-%
+%% Principle Component Analysis 
 %     pca.m
 %     projectData.m
 %     recoverData.m
-%     computeCentroids.m
-%     findClosestCentroids.m
-%     kMeansInitCentroids.m
-%
-%  For this exercise, you will not need to change any code in this file,
-%  or any other files other than those mentioned above.
-%
-
-%% Initialization
 clear ; close all; clc
 
 %% ================== Part 1: Load Example Dataset  ===================
-%  We start this exercise by using a small dataset that is easily to
-%  visualize
-%
 fprintf('Visualizing example dataset for PCA.\n\n');
 
-%  The following command loads the dataset. You should now have the 
-%  variable X in your environment
 load ('ex7data1.mat');
-
-%  Visualize the example dataset
 plot(X(:, 1), X(:, 2), 'bo');
 axis([0.5 6.5 2 8]); axis square;
 
@@ -40,15 +16,12 @@ pause;
 
 
 %% =============== Part 2: Principal Component Analysis ===============
-%  You should now implement PCA, a dimension reduction technique. You
-%  should complete the code in pca.m
-%
+%  PCA - dimension reduction technique
 fprintf('\nRunning PCA on example dataset.\n\n');
 
 %  Before running PCA, it is important to first normalize X
 [X_norm, mu, sigma] = featureNormalize(X);
 
-%  Run PCA
 [U, S] = pca(X_norm);
 
 %  Compute mu, the mean of the each feature
@@ -64,18 +37,14 @@ fprintf('Top eigenvector: \n');
 fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
 fprintf('\n(you should expect to see -0.707107 -0.707107)\n');
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 
 %% =================== Part 3: Dimension Reduction ===================
-%  You should now implement the projection step to map the data onto the 
+%  the projection step to map the data onto the 
 %  first k eigenvectors. The code will then plot the data in this reduced 
-%  dimensional space.  This will show you what the data looks like when 
-%  using only the corresponding eigenvectors to reconstruct it.
-%
-%  You should complete the code in projectData.m
-%
+%  dimensional space.
 fprintf('\nDimension reduction on example dataset.\n\n');
 
 %  Plot the normalized dataset (returned from pca)
@@ -104,12 +73,8 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% =============== Part 4: Loading and Visualizing Face Data =============
-%  We start the exercise by first loading and visualizing the dataset.
-%  The following code will load the dataset into your environment
-%
 fprintf('\nLoading face dataset.\n\n');
 
-%  Load Face dataset
 load ('ex7faces.mat')
 
 %  Display the first 100 faces in the dataset
@@ -120,7 +85,7 @@ pause;
 
 %% =========== Part 5: PCA on Face Data: Eigenfaces  ===================
 %  Run PCA and visualize the eigenvectors which are in this case eigenfaces
-%  We display the first 36 eigenfaces.
+%  display the first 36 eigenfaces.
 %
 fprintf(['\nRunning PCA on face dataset.\n' ...
          '(this mght take a minute or two ...)\n\n']);
@@ -141,7 +106,6 @@ pause;
 
 %% ============= Part 6: Dimension Reduction for Faces =================
 %  Project images to the eigen space using the top k eigenvectors 
-%  If you are applying a machine learning algorithm 
 fprintf('\nDimension reduction for face dataset.\n\n');
 
 K = 100;
@@ -181,14 +145,15 @@ pause;
 
 %% === Part 8(a): Optional (ungraded) Exercise: PCA for Visualization ===
 %  One useful application of PCA is to use it to visualize high-dimensional
-%  data. In the last K-Means exercise you ran K-Means on 3-dimensional 
+%  data. 
+% K-Means on 3-dimensional 
 %  pixel colors of an image. We first visualize this output in 3D, and then
 %  apply PCA to obtain a visualization in 2D.
 
 close all; close all; clc
 
-% Re-load the image from the previous exercise and run K-Means on it
-% For this to work, you need to complete the K-Means assignment first
+% Re-load the image and run K-Means on it
+% the K-Means assignment first
 A = double(imread('bird_small.png'));
 
 % If imread does not work for you, you can try instead
