@@ -34,4 +34,5 @@
    3. Principle Component Analysis 
      
 ###### Ex8:  Anomaly Detection and Collaborative Filtering
+   1. Anomaly Detection in server statistics across several machines
   
