@@ -28,8 +28,10 @@
    3. Find best C and sigma automatically
    4. Spam filter
 
-###### Ex6:  Principle Component Analysis and K-Means Clustering
+###### Ex7:  Principle Component Analysis and K-Means Clustering
    1. K-Means
    2. K-Means Clustering on Pixels -image compression
-   3.  Principle Component Analysis 
+   3. Principle Component Analysis 
+     
+###### Ex8:  Anomaly Detection and Collaborative Filtering
   
