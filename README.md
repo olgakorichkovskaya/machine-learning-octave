@@ -36,5 +36,5 @@
 ###### Ex8:  Anomaly Detection and Collaborative Filtering
    1. Anomaly Detection in server statistics across several machines
    2. Selecting the threshold epsolon via F1 alg (using precision and recall)
-   3. Collaborative Filtering on movie ratings dataset: "visualize" the ratings, Cost Function, gradient 
+   3. Collaborative Filtering on movie ratings dataset: "visualize" the ratings, Cost Function, gradient for Theta and X,    regularization
   
