@@ -30,11 +30,12 @@
 
 ###### Ex7:  Principle Component Analysis and K-Means Clustering
    1. K-Means
-   2. K-Means Clustering on Pixels -image compression
-   3. Principle Component Analysis 
+   2. K-Means Clustering on Pixels - image compression
+   3. Principle Component Analysis (PCA)
      
 ###### Ex8:  Anomaly Detection and Collaborative Filtering
    1. Anomaly Detection in server statistics across several machines
    2. Selecting the threshold epsolon via F1 alg (using precision and recall)
-   3. Collaborative Filtering on movie ratings dataset: "visualize" the ratings, Cost Function, gradient for Theta and X,    regularization
+   3. Collaborative Filtering on movie ratings dataset: "visualize" the ratings, Cost Function, gradient for Theta and X,    regularization, tarain model
+   4. Set own movie rating for short movie list - get  movie recommendation for new user
   
