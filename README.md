@@ -24,16 +24,16 @@
    3. NN - predict,  training set accuracy
 
 ###### 4: Neural Network Learning
-    1. Compute Cost (Feedforward)
-    2. Regularization
-    3. Sigmoid Gradient
-    4. Random initializing Pameters
-    5. Backpropagation
-    6. Regularization gradient
-    7. Training NN (using "fmincg")
-    8. Using different values of lambda and max iter
-    9.  Visualize Weights
-    10. Training set accuracy
+   1. Compute Cost (Feedforward)
+   2. Regularization
+   3. Sigmoid Gradient
+   4. Random initializing Pameters
+   5. Backpropagation
+   6. Regularization gradient
+   7. Training NN (using "fmincg")
+   8. Using different values of lambda and max iter
+   9.  Visualize Weights
+   10. Training set accuracy
 
 ###### 5: Regularized Linear Regression and Bias vs. Variance
    1. Regularized Linear Regression (cost function, gradient): y=theta0+ theta1*x1 (dimention=1)
