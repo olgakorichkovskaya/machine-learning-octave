@@ -2,14 +2,24 @@
 
 ###### Ex1:  Linear regression with one variable:
    1. Computing the cost, minimizing the cost function using Gradient Descent;
-   2. Feature Normalization
-   3. Linear regression with multiple variables
-   4. Selecting learning rates
-   5. Normal Equations
+   2. Visualizing J(theta_0, theta_1)
+   3. Feature Normalization - scaling features and seting them to zero mean
+   4. Linear regression with multiple variables - Gradient Descent - prediction
+   5. Selecting learning rates
+   6. Normal Equations - prediction
 
-###### Ex2:    
-
-###### Ex3:
+###### Ex2: Logistic Regression
+   1. Compute Cost and Gradient
+   2. Optimizing using fminunc (Octave-Matlab) - find optival theta
+   3. Plot decising Boundary
+   4. Using the logistic regression model to predict the probability, compute the training and test set accuracies
+   5. Regularization with logistic regression
+   6. Dataset with data points that are notlinearly separable - using more features - polynomial features
+   7. Initial cost and gradient for regularized logistic regression
+   8. Different lambda - how regularization affects the decision boundary and accuracy
+   
+###### Ex3: Multi-class Classication and Neural Networks
+   1.
 
 ###### Ex4:
 
